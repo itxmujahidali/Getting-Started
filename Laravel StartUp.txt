@@ -1,0 +1,79 @@
+1. *Create New Project:
+	composer create-project laravel/laravel example-app
+
+2. *switch to next directory:
+	cd example-app
+
+3. *Run Laravel Server
+	php artisan serve
+
+4. *Make Controller in Laravel:
+	php artisan make:controller Controller_Name
+
+5. *Make Model in Laravel: 
+	php artisan make:model Example --migration
+
+6. *Make Seeder in Laravel:
+	php artisan make:seeder AdminCredentials
+
+7. *Seeding Command:
+	php artisan db:seed
+	(this will seed all classes)
+
+8. *Seeding for specific class:
+	php artisan db:seed --class=ClassName
+
+9. *Laravel Cache Clear:
+
+	php artisan config:clear
+	php artisan cache:clear
+	composer dump-autoload
+	php artisan view:clear
+	php artisan route:clear
+
+10. *Database Refresh and delete dummy values:
+	php artisan migrate:refresh
+
+
+
+
+--------------------------------------layout Template---------------------------------------------------------
+
+<!doctype html>
+<html>
+<head>
+   @include('include.header')
+</head>
+<body>
+       @include('include.dropnav')
+           @yield('content')
+       @include('include.footer')
+</body>
+</html>
+
+---------------------------------------- END --------------------------------------------------------------
+
+----------------------------------------Pages Extend -----------------------------------------------
+@extends('layout.default')
+@section('content')
+	<body>
+		Something here!
+	</body>
+@stop
+
+-------------------------------------Pages End---------------------------------------------
+
+
+-------------------------------------Seeder (Use for add hard code values in Database )--------------------------------------------------
+
+1. Run this command -->	php artisan make:seeder AdminCredentials
+
+2. Add ( use DB; ) in your seeder class
+
+3. Register your AdminCredentials class in DatabaseSeeder.php file.
+
+4. Add your logic in Seeder class
+
+5. Run this command at the end -->	php artisan db:seed --class=ClassName
+
+

@@ -1,0 +1,38 @@
+*1. Clone from github into pc:
+
+	$ git clone https://github.com/GitUserName/Repository-Name
+
+*2. Check branch where you exist:
+	
+	$ git branch
+
+*3. Create new branch:
+	
+	$ git branch BranchName
+
+*4. Switch new branch:
+	
+	$ git checkout BranchName
+
+*5. Add all Files:
+	$ git add .
+
+*6. Commit Files:
+	$ git commit -m "Comments"
+		
+		/-m/ this argumnet use for make a comment. 
+
+*7. Check git Status:
+	$ git status
+
+*8. Origin
+	$ git push origin
+
+
+
+
+---------------------------------------------------Laravel Clone from github steps---------------------------------------------
+
+1. composer update (command)
+2. make .env file
+3. php artisan key:generate (command)-> (key Generate in .env file for APP_KEY)

@@ -1,0 +1,55 @@
+======================================== Django Documentation ==================================================
+Link for https://docs.djangoproject.com/en/3.2/intro/tutorial01/
+================================================================================================================
+*Create Project:
+>> django-admin startproject mysite
+
+*Run Server:
+>> python manage.py runserver
+
+*Create App:
+>> python manage.py startapp polls
+
+*Make Migrations:
+>> python manage.py makemigrations
+
+*Make Migrate:
+>> python manage.py migrate
+
+*Create SuperUser:
+>> python manage.py createsuperuser
+
+*Create Virtual Environment:
+>> python -m venv env
+>> env\Scripts\activate
+
+*Create Requirements.txt File:
+>> pip freeze > requirements.txt
+
+*Load Requirements.txt File:
+>> pip3 install -r requirements.txt
+
+----------------------------polls/urls.py--------------------------------------
+*Create urls.py file in the APP directory and add this code in the urls.py file:		
+from django.urls import path
+from . import views
+urlpatterns = [
+	path('', views.index, name='index'),]
+-------------------------------------------------------------------------------		
+
+-----------------------------mysite/urls.py------------------------------------
+*Create urls.py file in the mysite directory and automatically add code in the urls.py file:
+-------------------------------------------------------------------------------
+
+
+---------------------------- In App Views Create User -------------------------
+
+from django.contrib.auth.models import User
+
+myuser = User.objects.create_user(username,email,password)
+myuser.first_name = fullname
+myuser.username = username
+myuser.save()
+messages.success(request, "Your Money Scammer Account has been successfully created!")
+
+	
